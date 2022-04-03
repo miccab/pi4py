@@ -39,7 +39,10 @@ lcd = CharLCD(pin_rs=37, pin_rw=None, pin_e=35, pins_data=[33, 31, 29, 23], numb
 lcd.clear()
 n=5
 while n > 0:
+    lcd.cursor_pos = (0, 0)
     lcd.write_string(u"Hello everyone")
+    lcd.cursor_pos = (1, 0)
+    lcd.write_string(u"My name is Robi")
     time.sleep(1)
     lcd.clear()
     time.sleep(1)
